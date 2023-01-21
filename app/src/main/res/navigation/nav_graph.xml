@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.wheelsplus.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_groupFragment"
+            app:destination="@id/groupFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mapFragment"
+            app:destination="@id/initLocationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="com.example.wheelsplus.GroupFragment"
+        android:label="fragment_group"
+        tools:layout="@layout/fragment_group" >
+        <action
+            android:id="@+id/action_groupFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/initLocationFragment"
+        android:name="com.example.wheelsplus.InitLocationFragment"
+        android:label="fragment_init_location"
+        tools:layout="@layout/fragment_init_location" >
+        <action
+            android:id="@+id/action_initLocationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_initLocationFragment_to_rideFragment"
+            app:destination="@id/rideFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rideFragment"
+        android:name="com.example.wheelsplus.RideFragment"
+        android:label="fragment_ride"
+        tools:layout="@layout/fragment_ride" >
+        <action
+            android:id="@+id/action_rideFragment_to_initLocationFragment"
+            app:destination="@id/initLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.wheelsplus.DisplayChatsFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_display_chats" >
+        <action
+            android:id="@+id/action_chatFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+</navigation>

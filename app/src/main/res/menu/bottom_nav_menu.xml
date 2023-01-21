@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:icon="@drawable/vector_nv_home"
+        android:id="@+id/home"/>
+    <item android:title="Group"
+        android:icon="@drawable/vector_nv_group"
+        android:id="@+id/group"/>
+    <item android:title="Chat"
+        android:icon="@drawable/vector_nv_chat"
+        android:id="@+id/chat"/>
+    <item android:title="Settings"
+        android:icon="@drawable/vector_nv_settings"
+        android:id="@+id/settings"/>
+</menu>
